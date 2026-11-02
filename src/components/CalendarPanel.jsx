@@ -58,32 +58,32 @@ export default function CalendarPanel({ tasks = [] }) {
   const selectedDateTasks = getTasksForDay(selectedDate);
 
   return (
-    <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-xs flex flex-col justify-between">
+    <div className="bg-white rounded-2xl p-4 sm:p-6 border border-slate-100 shadow-xs flex flex-col justify-between">
       <div>
         {/* Calendar Header with Dynamic Month & Navigation */}
-        <div className="flex items-center justify-between mb-5">
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-4 sm:mb-5">
           <div>
-            <h3 className="font-bold text-slate-900 text-lg tracking-tight flex items-center gap-2">
-              <CalendarIcon className="w-5 h-5 text-indigo-600" />
+            <h3 className="font-bold text-slate-900 text-base sm:text-lg tracking-tight flex items-center gap-2">
+              <CalendarIcon className="w-4 sm:w-5 h-4 sm:h-5 text-indigo-600" />
               <span>{format(viewDate, 'MMMM yyyy')}</span>
             </h3>
-            <p className="text-xs text-slate-400 font-medium">
+            <p className="text-[11px] sm:text-xs text-slate-400 font-medium">
               Interactive Deadline Calendar
             </p>
           </div>
 
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1 sm:gap-1.5">
             <button
               type="button"
               onClick={handleJumpToToday}
-              className="px-2.5 py-1 text-xs font-semibold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 rounded-lg transition-colors mr-1"
+              className="px-2 sm:px-2.5 py-1 text-xs font-semibold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 rounded-lg transition-colors mr-0.5 sm:mr-1"
             >
               Today
             </button>
             <button
               type="button"
               onClick={handlePrevWeek}
-              className="p-1.5 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
+              className="p-1 sm:p-1.5 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
               title="Previous week"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -91,7 +91,7 @@ export default function CalendarPanel({ tasks = [] }) {
             <button
               type="button"
               onClick={handleNextWeek}
-              className="p-1.5 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
+              className="p-1 sm:p-1.5 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
               title="Next week"
             >
               <ChevronRight className="w-4 h-4" />
@@ -100,7 +100,7 @@ export default function CalendarPanel({ tasks = [] }) {
         </div>
 
         {/* Days of the Week Selector */}
-        <div className="grid grid-cols-7 gap-1.5 p-1 bg-slate-50/70 rounded-2xl border border-slate-100 mb-6">
+        <div className="grid grid-cols-7 gap-1 sm:gap-1.5 p-1 bg-slate-50/70 rounded-2xl border border-slate-100 mb-5 sm:mb-6">
           {weekDays.map((day) => {
             const isSelected = isSameDay(day, selectedDate);
             const isCurrent = isToday(day);

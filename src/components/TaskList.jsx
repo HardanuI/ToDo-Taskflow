@@ -99,11 +99,11 @@ export default function TaskList({
   };
 
   return (
-    <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-xs">
+    <div className="bg-white rounded-2xl p-4 sm:p-6 border border-slate-100 shadow-xs">
       {/* Header with Title & Filter Tabs */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-        <div className="flex items-center gap-3">
-          <h2 className="text-lg font-bold text-slate-900 tracking-tight">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3.5 sm:gap-4 mb-5 sm:mb-6">
+        <div className="flex items-center justify-between sm:justify-start gap-3">
+          <h2 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
             {getSectionTitle()}
           </h2>
           <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-600">
@@ -112,8 +112,8 @@ export default function TaskList({
         </div>
 
         {/* Tab Filters (All, Personal, Groups) */}
-        <div className="flex items-center gap-3">
-          <div className="flex items-center bg-slate-100 p-1 rounded-xl text-xs font-medium text-slate-600">
+        <div className="flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3">
+          <div className="flex items-center bg-slate-100 p-1 rounded-xl text-xs font-medium text-slate-600 flex-1 sm:flex-initial justify-around">
             {[
               { id: 'all', label: 'All' },
               { id: 'personal', label: 'Personal' },
@@ -137,7 +137,7 @@ export default function TaskList({
           <button
             type="button"
             onClick={onAddTask}
-            className="p-1.5 text-slate-500 hover:text-indigo-600 hover:bg-slate-100 rounded-xl transition-colors"
+            className="p-1.5 text-slate-500 hover:text-indigo-600 hover:bg-slate-100 rounded-xl transition-colors shrink-0"
             title="Add task"
           >
             <Plus className="w-5 h-5" />

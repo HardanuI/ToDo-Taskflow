@@ -79,11 +79,11 @@ export default function TaskModal({ isOpen, onClose, onSave, editingTask = null 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="bg-white rounded-2xl shadow-2xl border border-slate-100 w-full max-w-lg overflow-hidden animate-in zoom-in-95 duration-200">
+      <div className="bg-white rounded-2xl shadow-2xl border border-slate-100 w-full max-w-md mx-4 max-h-[90vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200">
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
+        <div className="flex items-center justify-between px-5 sm:px-6 py-4 border-b border-slate-100 shrink-0">
           <div>
-            <h3 className="text-lg font-bold text-slate-900">
+            <h3 className="text-base sm:text-lg font-bold text-slate-900">
               {editingTask ? 'Edit Task' : 'Add New Task'}
             </h3>
             <p className="text-xs text-slate-500">
@@ -102,7 +102,7 @@ export default function TaskModal({ isOpen, onClose, onSave, editingTask = null 
         </div>
 
         {/* Modal Form */}
-        <form onSubmit={handleSubmit} className="p-6 space-y-5">
+        <form onSubmit={handleSubmit} className="p-5 sm:p-6 space-y-4 sm:space-y-5 overflow-y-auto flex-1">
           {error && (
             <div className="p-3 bg-rose-50 border border-rose-200 text-rose-700 text-xs rounded-xl flex items-center gap-2">
               <AlertCircle className="w-4 h-4 shrink-0 text-rose-500" />

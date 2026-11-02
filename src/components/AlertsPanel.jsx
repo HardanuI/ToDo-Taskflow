@@ -65,7 +65,7 @@ export default function AlertsPanel({ tasks = [] }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-xs">
+    <div className="bg-white rounded-2xl p-4 sm:p-6 border border-slate-100 shadow-xs">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <div className="p-1.5 rounded-lg bg-amber-50 text-amber-600">

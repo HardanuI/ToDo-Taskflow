@@ -20,7 +20,7 @@ export default function HighPriorityPanel({
   const isGroup = primaryTask.type === 'group';
 
   return (
-    <div className="bg-gradient-to-r from-rose-50/90 via-white to-white rounded-2xl p-6 border border-rose-200/80 shadow-xs relative overflow-hidden transition-all">
+    <div className="bg-gradient-to-r from-rose-50/90 via-white to-white rounded-2xl p-4 sm:p-6 border border-rose-200/80 shadow-xs relative overflow-hidden transition-all">
       {/* Decorative accent element */}
       <div className="absolute top-0 left-0 bottom-0 w-1.5 bg-rose-500 rounded-l-2xl" />
 

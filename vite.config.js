@@ -4,8 +4,11 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    host: true, // <-- Tambahkan baris ini
+    port: 5173
+  },
   resolve: {
-    // Memaksa Vite hanya menggunakan satu versi React
-    dedupe: ['react', 'react-dom']
+    dedupe: ['react', 'react-dom'] 
   }
 })

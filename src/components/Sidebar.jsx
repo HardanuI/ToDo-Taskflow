@@ -7,15 +7,19 @@ import {
   Settings,
   HelpCircle,
   LogOut,
+  Pencil,
 } from 'lucide-react';
+import { useUserStore } from '../store/useUserStore';
 
 export default function Sidebar({
   activeTab = 'dashboard',
   onSelectTab,
   appMeta,
-  userProfile,
   tasks = [],
 }) {
+  const { name, openEditModal } = useUserStore();
+  const displayName = name.trim() ? name.trim() : 'Guest';
+
   const myTasksCount = tasks.filter((t) => t.type === 'personal' && !t.completed).length;
   const sharedCount = tasks.filter((t) => t.type === 'group' && !t.completed).length;
   const highPriorityCount = tasks.filter((t) => t.priority === 'High' && !t.completed).length;
@@ -52,7 +56,7 @@ export default function Sidebar({
   ];
 
   return (
-    <aside className="w-64 bg-white border-r border-slate-100 flex flex-col justify-between p-5 min-h-screen shrink-0 select-none transition-all">
+    <aside className="hidden lg:flex w-64 bg-white border-r border-slate-100 flex-col justify-between p-5 min-h-screen shrink-0 select-none transition-all">
       {/* Top Brand Logo */}
       <div>
         <div className="flex items-center gap-3 px-2 py-3 mb-6">
@@ -136,31 +140,28 @@ export default function Sidebar({
           <span>Help & Support</span>
         </button>
 
-        {/* User Card */}
-        {userProfile && (
-          <div className="flex items-center gap-3 p-2 mt-2 bg-slate-50 rounded-2xl border border-slate-100">
-            <img
-              src={userProfile.avatar_url}
-              alt={userProfile.name}
-              className="w-9 h-9 rounded-full object-cover ring-2 ring-white shadow-xs"
-            />
-            <div className="flex-1 min-w-0">
-              <p className="text-xs font-semibold text-slate-800 truncate">
-                {userProfile.name}
-              </p>
-              <p className="text-[11px] text-slate-400 truncate">
-                {userProfile.email}
-              </p>
-            </div>
-            <button
-              type="button"
-              className="p-1.5 text-slate-400 hover:text-rose-500 rounded-lg hover:bg-white transition-colors"
-              title="Logout"
-            >
-              <LogOut className="w-3.5 h-3.5" />
-            </button>
+        {/* User Card with Name from useUserStore */}
+        <div className="flex items-center gap-3 p-2 mt-2 bg-slate-50 rounded-2xl border border-slate-100 group">
+          <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 text-white font-bold text-sm flex items-center justify-center ring-2 ring-white shadow-xs shrink-0">
+            {displayName.charAt(0).toUpperCase()}
           </div>
-        )}
+          <div className="flex-1 min-w-0">
+            <p className="text-xs font-semibold text-slate-800 truncate">
+              {displayName}
+            </p>
+            <p className="text-[11px] text-slate-400 truncate">
+              {name ? `${displayName.toLowerCase().replace(/\s+/g, '')}@taskflow.app` : 'Local User'}
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={openEditModal}
+            className="p-1.5 text-slate-400 hover:text-indigo-600 rounded-lg hover:bg-white transition-colors"
+            title="Edit name"
+          >
+            <Pencil className="w-3.5 h-3.5" />
+          </button>
+        </div>
       </div>
     </aside>
   );

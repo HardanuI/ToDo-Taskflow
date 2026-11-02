@@ -1,16 +1,68 @@
-# React + Vite
+# ✨ TaskFlow Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TaskFlow adalah aplikasi manajemen tugas (To-Do List) modern yang dirancang untuk membantu Anda mengatur pekerjaan pribadi maupun kolaborasi grup dengan antarmuka yang bersih, intuitif, dan responsif.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-2C2C2C?style=for-the-badge&logo=react&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Fitur Utama
 
-## React Compiler
+- **📝 Manajemen Tugas (CRUD):** Tambah, edit, hapus, dan selesaikan tugas dengan mudah melalui modal interaktif.
+- **👥 Pribadi & Grup:** Bedakan tugas untuk diri sendiri (*Personal*) atau untuk kolaborasi tim (*Group*).
+- **🚩 Prioritas (Priority):** Tandai tugas penting dengan label *High Priority* (Merah), *Medium*, atau *Low* agar tidak ada yang terlewat.
+- **🚨 Pengingat 6 Jam (Alerts):** Panel khusus yang secara otomatis mendeteksi dan menampilkan tugas yang *deadline*-nya kurang dari 6 jam.
+- **📅 Kalender Dinamis:** Kalender interaktif yang menyorot tanggal hari ini dan menampilkan *deadline* tugas sesuai tanggal yang dipilih.
+- **🔄 State Persistence:** Data tugas Anda aman dan tidak hilang saat halaman di-refresh (disimpan otomatis di `localStorage` via Zustand).
+- **🎨 UI/UX Modern:** Menggunakan Tailwind CSS dengan desain *clean*, *rounded*, dan *smooth animations*.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Teknologi yang Digunakan
 
-## Expanding the ESLint configuration
+Proyek ini dibangun menggunakan *tech stack* modern untuk memastikan performa dan skalabilitas:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Framework:** [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **State Management:** [Zustand](https://github.com/pmndrs/zustand) (dengan middleware `persist`)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Date Handling:** [date-fns](https://date-fns.org/)
+- **Linting:** ESLint
+
+## 💻 Cara Menjalankan Proyek di Lokal
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer Anda:
+
+1. **Clone repositori ini:**
+   `git clone https://github.com/HardanuI/taskflow-dashboard.git`
+
+2. **Masuk ke folder proyek:**
+   `cd taskflow-dashboard`
+
+3. **Install semua dependensi:**
+   `npm install`
+
+4. **Jalankan server pengembangan (Vite):**
+   `npm run dev`
+
+5. Buka browser Anda dan akses `http://localhost:5173`.
+
+## 📁 Struktur Folder
+
+- `src/` - Folder utama kode sumber
+  - `components/` - Komponen UI (Sidebar, TopBar, TaskList, AlertsPanel, dll)
+  - `data/` - File JSON dummy (jika masih digunakan)
+  - `store/` - Zustand store untuk state management (useTaskStore.js)
+  - `utils/` - Fungsi bantuan (dateUtils.js)
+  - `assets/` - Gambar dan ikon statis
+  - `App.jsx` - Komponen utama aplikasi
+  - `main.jsx` - Entry point React
+  - `index.css` - Konfigurasi Tailwind CSS
+
+## 🗺️ Rencana Pengembangan (Future Improvements)
+
+Proyek ini masih akan terus dikembangkan. Beberapa fitur yang direncanakan:
+- [ ] Integrasi database *(Supabase / Firebase)* untuk sinkronisasi multi-device.
+- [ ] Fitur *Drag and Drop* untuk mengurutkan tugas.
+- [ ] Fitur *Dark Mode*.
+- [ ] Notifikasi push (PWA) untuk pengingat *deadline*.
+- [ ] Fitur berbagi tugas (Share Task) antar pengguna.

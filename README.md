@@ -1,5 +1,8 @@
 # ✨ TaskFlow Dashboard
 
+![TaskFlow Preview](./screenshots/dekstop.png)
+![TaskFlow Preview](./screenshots/mobile.png)
+
 TaskFlow adalah aplikasi manajemen tugas (To-Do List) modern yang dirancang untuk membantu Anda mengatur pekerjaan pribadi maupun kolaborasi grup dengan antarmuka yang bersih, intuitif, dan responsif.
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)

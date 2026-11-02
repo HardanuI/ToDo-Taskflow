@@ -33,5 +33,36 @@ Proyek ini dibangun menggunakan *tech stack* modern untuk memastikan performa da
 Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer Anda:
 
 1. **Clone repositori ini:**
-   ```bash
-   git clone https://github.com/USERNAME_ANDA/taskflow-dashboard.git
+   `git clone https://github.com/HardanuI/taskflow-dashboard.git`
+
+2. **Masuk ke folder proyek:**
+   `cd taskflow-dashboard`
+
+3. **Install semua dependensi:**
+   `npm install`
+
+4. **Jalankan server pengembangan (Vite):**
+   `npm run dev`
+
+5. Buka browser Anda dan akses `http://localhost:5173`.
+
+## 📁 Struktur Folder
+
+- `src/` - Folder utama kode sumber
+  - `components/` - Komponen UI (Sidebar, TopBar, TaskList, AlertsPanel, dll)
+  - `data/` - File JSON dummy (jika masih digunakan)
+  - `store/` - Zustand store untuk state management (useTaskStore.js)
+  - `utils/` - Fungsi bantuan (dateUtils.js)
+  - `assets/` - Gambar dan ikon statis
+  - `App.jsx` - Komponen utama aplikasi
+  - `main.jsx` - Entry point React
+  - `index.css` - Konfigurasi Tailwind CSS
+
+## 🗺️ Rencana Pengembangan (Future Improvements)
+
+Proyek ini masih akan terus dikembangkan. Beberapa fitur yang direncanakan:
+- [ ] Integrasi database *(Supabase / Firebase)* untuk sinkronisasi multi-device.
+- [ ] Fitur *Drag and Drop* untuk mengurutkan tugas.
+- [ ] Fitur *Dark Mode*.
+- [ ] Notifikasi push (PWA) untuk pengingat *deadline*.
+- [ ] Fitur berbagi tugas (Share Task) antar pengguna.

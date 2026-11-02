@@ -1,0 +1,188 @@
+{
+  "app_meta": {
+    "title": "TaskFlow Dashboard",
+    "version": "1.1.0",
+    "timezone": "Asia/Jakarta",
+    "locale": "id-ID",
+    "theme": {
+      "primary_color": "#5A67D8",
+      "secondary_color": "#F3F4F6",
+      "text_dark": "#1F2937",
+      "text_light": "#6B7280",
+      "success": "#10B981",
+      "danger": "#EF4444"
+    }
+  },
+  "user_profile": {
+    "id": "usr_001",
+    "name": "James",
+    "email": "james@taskflow.app",
+    "avatar_url": "https://i.pravatar.cc/150?img=11",
+    "greeting_template": "Hi, {name}!",
+    "sub_greeting": "What are your plans for today?",
+    "is_editable": true,
+    "editable_fields": ["name", "email", "avatar_url"],
+    "updated_at": "2026-11-01T08:15:00+07:00"
+  },
+  "settings": {
+    "date_format": "dd MMM yyyy",
+    "time_format": "HH:mm",
+    "datetime_format": "dd MMM yyyy, HH:mm",
+    "week_start": "monday",
+    "allow_custom_datetime": true,
+    "datetime_picker_config": {
+      "min_date": "2026-01-01T00:00:00+07:00",
+      "max_date": "2027-12-31T23:59:59+07:00",
+      "step_minutes": 15,
+      "default_duration_minutes": 60
+    }
+  },
+  "navigation": {
+    "sidebar_items": [
+      { "id": "dashboard", "label": "Dashboard", "icon": "LayoutGrid", "active": true },
+      { "id": "workflows", "label": "Workflows", "icon": "Zap", "active": false },
+      { "id": "integrations", "label": "Integrations", "icon": "Puzzle", "active": false }
+    ],
+    "top_bar": {
+      "search_placeholder": "Search or type command",
+      "actions": ["Export data", "Add new board"]
+    }
+  },
+  "dashboard_content": {
+    "quick_access_cards": [
+      {
+        "id": "qa_1",
+        "title": "Stay organized",
+        "description": "Afllips for your notes",
+        "icon": "CalendarIcon",
+        "type": "illustration"
+      },
+      {
+        "id": "qa_2",
+        "title": "Sync your notes",
+        "description": "Effortlessly sync your notes",
+        "icon": "DeviceMobile",
+        "type": "illustration"
+      },
+      {
+        "id": "qa_3",
+        "title": "Collaborate and share",
+        "description": "Share your notes",
+        "icon": "Users",
+        "type": "illustration"
+      }
+    ],
+    "notifications": [
+      {
+        "id": "notif_1",
+        "type": "event",
+        "title": "Upcoming event",
+        "content": "Landing Page Meeting",
+        "status": "upcoming",
+        "start_time": "2026-11-02T11:00:00+07:00",
+        "end_time": "2026-11-02T12:00:00+07:00",
+        "created_at": "2026-10-30T09:00:00+07:00",
+        "is_read": false
+      },
+      {
+        "id": "notif_2",
+        "type": "message",
+        "title": "Message | Product design",
+        "content": "Hey team, just wanted to check in and see how...",
+        "status": "unread",
+        "avatar": "https://i.pravatar.cc/150?img=5",
+        "created_at": "2026-10-31T14:22:00+07:00",
+        "is_read": false
+      }
+    ],
+    "assignments": [
+      {
+        "id": "assign_1",
+        "project": "Motion design",
+        "category": "Logo",
+        "title": "Design a packaging concept for a new product",
+        "priority": "High",
+        "tags": ["Package design"],
+        "assignee": "Rachel Lee",
+        "avatar": "https://i.pravatar.cc/150?img=9",
+        "status": "in_progress",
+        "start_date": "2026-11-01T09:00:00+07:00",
+        "due_date": "2026-11-05T17:00:00+07:00",
+        "created_at": "2026-10-28T10:30:00+07:00",
+        "updated_at": "2026-11-01T08:00:00+07:00"
+      }
+    ],
+    "calendar": {
+      "current_month": "2026-11",
+      "today": "2026-11-01T10:00:00+07:00",
+      "selected_date": "2026-11-01T00:00:00+07:00",
+      "view_mode": "week",
+      "events": [
+        {
+          "id": "evt_1",
+          "title": "Team meeting",
+          "start_time": "2026-11-01T16:30:00+07:00",
+          "end_time": "2026-11-01T17:00:00+07:00",
+          "type": "meeting",
+          "color": "#5A67D8"
+        },
+        {
+          "id": "evt_2",
+          "title": "Meeting with new client",
+          "start_time": "2026-11-01T11:30:00+07:00",
+          "end_time": "2026-11-01T12:30:00+07:00",
+          "type": "meeting",
+          "color": "#EF4444"
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "id": "task_1",
+        "title": "Conduct research",
+        "start_time": "2026-11-01T10:30:00+07:00",
+        "due_date": "2026-11-01T12:00:00+07:00",
+        "progress": 90,
+        "assignees": [1, 2, 3],
+        "comments": 4,
+        "attachments": 2,
+        "created_at": "2026-10-25T09:00:00+07:00",
+        "updated_at": "2026-11-01T09:45:00+07:00"
+      },
+      {
+        "id": "task_2",
+        "title": "Schedule a meeting",
+        "start_time": "2026-11-01T12:00:00+07:00",
+        "due_date": "2026-11-01T13:00:00+07:00",
+        "progress": 50,
+        "assignees": [1, 4],
+        "comments": 4,
+        "attachments": 3,
+        "created_at": "2026-10-26T11:00:00+07:00",
+        "updated_at": "2026-11-01T08:30:00+07:00"
+      },
+      {
+        "id": "task_3",
+        "title": "Send out reminders",
+        "start_time": "2026-11-21T10:00:00+07:00",
+        "due_date": "2026-11-21T11:00:00+07:00",
+        "progress": 10,
+        "assignees": [1, 5, 6],
+        "comments": 16,
+        "attachments": 3,
+        "created_at": "2026-10-20T08:00:00+07:00",
+        "updated_at": "2026-10-31T15:10:00+07:00"
+      }
+    ],
+    "analytics": [
+      { "id": "stats_1", "label": "Marketing", "percentage": 100, "color": "green" },
+      { "id": "stats_2", "label": "Typography", "percentage": 65, "color": "red" }
+    ],
+    "promo_card": {
+      "title": "Go premium!",
+      "description": "Gain access to a range of benefits designed to enhance your user experience.",
+      "button_text": "Find out more",
+      "theme": "purple_gradient"
+    }
+  }
+}

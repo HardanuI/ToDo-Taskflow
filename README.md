@@ -6,7 +6,7 @@
 
 | 💻 Tampilan Desktop | 📱 Tampilan Mobile |
 | :---: | :---: |
-| <img src="./screenshots/desktop.png" alt="Desktop Preview" width="100%" style="border-radius: 8px; border: 1px solid #eaeaea;" /> | <img src="./screenshots/mobile.png" alt="Mobile Preview" width="100%" style="border-radius: 8px; border: 1px solid #eaeaea;" /> |
+| <img src="./screenshots/dekstop.png" alt="Desktop Preview" width="100%" style="border-radius: 8px; border: 1px solid #eaeaea;" /> | <img src="./screenshots/mobile.png" alt="Mobile Preview" width="100%" style="border-radius: 8px; border: 1px solid #eaeaea;" /> |
 
 TaskFlow adalah aplikasi manajemen tugas (To-Do List) modern yang dirancang untuk membantu Anda mengatur pekerjaan pribadi maupun kolaborasi grup dengan antarmuka yang bersih, intuitif, dan responsif.
 
